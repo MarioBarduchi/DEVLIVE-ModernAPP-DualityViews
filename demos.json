@@ -1,0 +1,53 @@
+drop table if exists movies purge;
+
+CREATE TABLE movies (data JSON);
+
+INSERT INTO movies VALUES (
+JSON {
+	'movie_id'	: 1234, 
+	'title'	 	: 'Iron Man',
+	'film_date'	: '2010-05-07',
+	'cast'  	: [
+        {'actor_id': 1,
+		  'actor'  : 'Robert Downey Jr.'
+        },
+        {'actor_id': 2,
+		  'actor'  : 'Gwyneth Paltrow'
+        },
+        {'actor_id': 3,
+		  'actor'  : 'Jon Favreau'
+        }
+    ],
+	'genre'		: 'Action'
+}
+);	
+
+INSERT INTO movies VALUES (
+JSON {
+	'movie_id'	: 5678, 
+	'title'	 	: 'Transformers',
+	'film_date'	: '2007-07-08',
+	'cast'  	:	 
+	[
+		{'actor_id': 1,
+		  'actor'  : 'Shia LaBeouf'
+		}, 
+		{'actor_id': 2,
+		  'actor'  : 'Megan Fox'
+		}
+	],
+	'genre'		: 'Action'
+	}
+);	
+
+INSERT INTO movies VALUES (
+JSON {
+	'movie_id'	: 9999, 
+	'title'	 	: 'Harry Potter - The Philosophical Stone',
+	'film_date'	: '2001-11-11',
+	'genre'		: 'Fantasy'
+	}
+);
+
+commit;
+
