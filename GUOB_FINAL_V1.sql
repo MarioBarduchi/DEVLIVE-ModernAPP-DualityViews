@@ -442,7 +442,8 @@ where  d.data.departmentNumber = 20;
 select * from dept where deptno = 20;
 
 
-
+--====================
+-- Oracle JDBC test
 --====================
 URL='jdbc:oracle:thin:mvn1/Password123##@//localhost:1521/freepdb1'
 ./run.sh $URL movie.DropTable       -- Drops the table used by the examples.
